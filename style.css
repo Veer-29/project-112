@@ -1,0 +1,63 @@
+body
+{
+  color: white;
+  background-color:darkmagenta;
+}
+
+span
+{
+  font-size: 30px;
+}
+
+#camera , #result
+{
+  border: 2px dashed rgb(201, 224, 96);
+  width: 350px;
+  height: 300px; 
+  animation: changeColor 3s linear infinite; 
+}
+
+#result_emotion_name ,#result_emotion_name2  
+{
+  color: rgb(41, 226, 35);
+  animation: changeColor 3s linear infinite;
+}
+.emotion_name
+{
+  font-size: 40px;
+  }
+.emoji
+{
+  font-size:48px;
+}
+
+.heading{
+  font-size: 18px;
+  border-radius:10px ;
+  letter-spacing: 10px;
+}
+section{
+  position: relativet;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: changeColor 3s linear infinite;
+}
+section.h3
+{
+color: #00ff0a;
+font-family: consolasa;
+font-weight: 300;
+letter-spacing: 10px;
+}
+
+@keyframes changeColor{
+  0%
+  {filter: hue-rotate(0deg);}
+  100%
+  {filter: hue-rotate(360deg);}
+}
+
