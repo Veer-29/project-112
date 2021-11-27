@@ -39,34 +39,37 @@ function speak(){
     classifier.classify(img, gotResult);
 }
 
-function gotResult(error, results) {
+function gotResult(error, result) {
     if (error) {
         console.error(error);
     } else {
-        console.log(results);
-        document.getElementById("result_emotion_name").innerHTML = results[0].label;
-        document.getElementById("result_emotion_name2").innerHTML = results[1].label;
-        prediction_1 = results[0].label;
-        prediction_2 = results[1].label;
+        console.log(result);
+        document.getElementById("result_emotion_name").innerHTML = result[0].label;
+        document.getElementById("result_emotion_name2").innerHTML = result[1].label;
+        prediction_1 = result[0].label;
+        prediction_2 = result[1].label;
+        
+
         speak();
-        if(results[0].label == "Victory")
+        if(result[0].label == "victory")
         {
             document.getElementById("update_emoji").innerHTML = "&#128077;"
         }
-        if(results[0].label == "Best") {
+        if(result[0].label == "best") {
             document.getElementById("update_emoji").innerHTML = "&#128076;"
         }
-        if(results[0].label == "Amazing") {
+        if(result[0].label == "amazing") {
             document.getElementById("update_emoji").innerHTML = "&#9996;"           
         }
-        if(results[1].label == "Victory") {
+        if(result[1].label == "victory") {
             document.getElementById("update_emoji2").innerHTML = "&#128077;"        
         }
-        if(results[1].label == "Best") {
+        if(result[1].label == "best") {
             document.getElementById("update_emoji2").innerHTML = "&#128076;"     
         }
-        if(results[1].label == "Amazing") {
+        if(result[1].label == "amazing") {
              document.getElementById("update_emoji2").innerHTML = "&#9996;"     
         }
     }
 }
+
